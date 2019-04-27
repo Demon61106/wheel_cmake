@@ -1,0 +1,32 @@
+﻿{
+  "configurations": [
+    {
+      "name": "wheel",
+      "generator": "Unix Makefiles",
+      "remoteMachineName": "${defaultRemoteMachineName}",
+      "configurationType": "Debug",
+      "remoteCMakeListsRoot": "/var/tmp/workspace/${name}",
+      "cmakeExecutable": "/usr/bin/cmake",
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "remoteBuildRoot": "/var/tmp/workspace/build/${name}",
+      "remoteInstallRoot": "/var/tmp/workspace/install/${name}",
+      "remoteCopySources": true,
+      "remoteCopySourcesOutputVerbosity": "Normal",
+      "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [
+        ".vs",
+        ".git"
+      ],
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [
+        "linux_x64"
+      ]
+    }
+  ]
+}
